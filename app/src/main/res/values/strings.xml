@@ -74,4 +74,8 @@
     <string name="uidai">UIDAI</string>
     <string name="fingerprint_authentication">Fingerprint Authentication</string>
     <string name="place_your_finger_on_the_scanner_to_proceed">Place your Finger on the Scanner to Proceed</string>
+    <string name="enter_aadhaar_number">Enter Aadhaar number</string>
+    <string name="otp_has_been_sent_to_your_registered_mobile_number">OTP has been sent to your registered Mobile number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify">verify</string>
 </resources>

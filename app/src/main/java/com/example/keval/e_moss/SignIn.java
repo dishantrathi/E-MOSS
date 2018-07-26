@@ -16,6 +16,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.keval.e_moss.Aadhaar.Barcode.BarcodeScan;
+import com.example.keval.e_moss.Aadhaar.FingerPrint.FingerPrintView;
+import com.example.keval.e_moss.Aadhaar.OTP.Adharotp;
 import com.example.keval.e_moss.Utils.Constants;
 import com.mpt.storage.SharedPreferenceUtil;
 
@@ -90,6 +93,32 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
+    public void AadhaarSignIn() {
+
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Notice");
+        builder.setMessage("Launching this missile will destroy the entire universe. Is this what you intended to do?");
+
+        // add the buttons
+        builder.setPositiveButton("Launch missile", null);
+        builder.setNegativeButton("Cancel", null);
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+        dialog.setContentView(R.layout.my_dialog_layout);
+        TextView myDialogLayoutOTP = (TextView) dialog.findViewById(R.id.myDialogLayoutOTP);
+        TextView myDialogLayoutQR = (TextView) dialog.findViewById(R.id.myDialogLayoutQR);
+        TextView myDialogLayoutFinger = (TextView) dialog.findViewById(R.id.myDialogLayoutFinger);
+
+        myDialogLayoutOTP.setOnClickListener(this);
+        myDialogLayoutQR.setOnClickListener(this);
+        myDialogLayoutFinger.setOnClickListener(this);
+
+
+    }
+
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -100,10 +129,19 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                 login();
                 break;
             case R.id.tvSignInForgotPassword:
-                startActivity(new Intent(this, com.example.keval.e_moss.Aadhaar.Barcode.BarcodeScan.class));
+
                 break;
             case R.id.aadhaarSignIn:
-
+                AadhaarSignIn();
+                break;
+            case R.id.myDialogLayoutOTP:
+                startActivity(new Intent(this, Adharotp.class));
+                break;
+            case R.id.myDialogLayoutQR:
+                startActivity(new Intent(this, BarcodeScan.class));
+                break;
+            case R.id.myDialogLayoutFinger:
+                startActivity(new Intent(this, FingerPrintView.class));
                 break;
         }
     }

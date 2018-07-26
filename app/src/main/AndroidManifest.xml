@@ -7,7 +7,9 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <application
@@ -83,6 +85,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".KioskCenter"
+            android:label="Kiosk Center"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Aadhaar.OTP.Adharotp"
+            android:label="Kiosk Center"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Aadhaar.FingerPrint.FingerPrintView"
             android:label="Kiosk Center"
             android:theme="@style/AppTheme" />
     </application>
