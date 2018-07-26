@@ -1,11 +1,19 @@
 package com.example.keval.e_moss;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.keval.e_moss.Utils.Constants;
@@ -17,9 +25,11 @@ import org.json.JSONObject;
 
 public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
-    Button btSignInSignUp, btSignInSignIn;
+    Button btSignInSignUp, btSignInSignIn, fb_login_button, google_button;
     EditText etSignInUserName, etSignInPassword;
     JSONArray arrayAllUserData;
+    TextView tvSignInForgotPassword;
+    ImageView aadhaarSignIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +38,17 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
 
         btSignInSignUp = (Button) findViewById(R.id.btSignInSignUp);
         btSignInSignIn = (Button) findViewById(R.id.btSignInSignIn);
+        fb_login_button = (Button) findViewById(R.id.fb_login_button);
+        google_button = (Button) findViewById(R.id.google_button);
+        aadhaarSignIn = (ImageView) findViewById(R.id.aadhaarSignIn);
         etSignInUserName = (EditText) findViewById(R.id.etSignInUserName);
         etSignInPassword = (EditText) findViewById(R.id.etSignInPassword);
+        tvSignInForgotPassword = (TextView) findViewById(R.id.tvSignInForgotPassword);
 
         btSignInSignUp.setOnClickListener(this);
         btSignInSignIn.setOnClickListener(this);
+        tvSignInForgotPassword.setOnClickListener(this);
+        aadhaarSignIn.setOnClickListener(this);
 
         arrayAllUserData = new JSONArray();
 
@@ -82,6 +98,12 @@ public class SignIn extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.btSignInSignIn:
                 login();
+                break;
+            case R.id.tvSignInForgotPassword:
+                startActivity(new Intent(this, com.example.keval.e_moss.Aadhaar.Barcode.BarcodeScan.class));
+                break;
+            case R.id.aadhaarSignIn:
+
                 break;
         }
     }

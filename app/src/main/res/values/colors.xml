@@ -53,4 +53,7 @@
     <color name="colorBlack">#000000</color>
     <color name="transparent_blue">#9955C5FF</color>
     <color name="colorBackground">#136FA8</color>
+    <color name="text_shadow">#7F000000</color>
+    <color name="facebookbackcolor">#1263b5</color>
+    <color name="googlebackcolor">#da4835</color>
 </resources>

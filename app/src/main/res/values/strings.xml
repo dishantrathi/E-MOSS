@@ -65,4 +65,13 @@
     <string name="enter_sub">Enter Subject</string>
     <string name="message_">Message</string>
     <string name="submit">Submit</string>
+    <string name="enter_fab_button">Enter Fab Button</string>
+    <string name="library_name">MaterialBarcodeScanner</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for barcode detection.</string>
+    <string name="no_camera_permission">Cannot start the barcode reader because the camera permission was not granted.</string>
+    <string name="fb_signup">Facebook</string>
+    <string name="google_signup">Google+</string>
+    <string name="uidai">UIDAI</string>
+    <string name="fingerprint_authentication">Fingerprint Authentication</string>
+    <string name="place_your_finger_on_the_scanner_to_proceed">Place your Finger on the Scanner to Proceed</string>
 </resources>
